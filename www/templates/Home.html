@@ -1,0 +1,147 @@
+<ion-view view-title="Baitak">
+  <ion-content class=" has-header">
+
+
+
+    <ion-slide-box does-continue="true"  slide-interval="500" show-pager="true"
+                    on-slide-changed="slideHasChanged($index)" >
+      <ion-slide ng-repeat="item in Featured.Data" >
+        <div class="list list-borderless  card"  >
+<div class="item text-center BaitakTabs">
+ Property for {{item.AdvertismentType}}
+</div>
+          <div class="item item-thumbnail-left item-text-wrap" style="min-height: 150px!important;">
+            <img src="{{item.Image}}">
+            <h2>{{item.Title}}</h2>
+            <p>{{item.Date}}</p>
+          </div>
+
+          <div class="tabs tabs-icon-left BaitakTabs">
+            <a class="tab-item ">
+
+             <b> {{item.Price}}</b>
+            </a>
+            <a class="tab-item">
+              <i class="icon "> <img src="img/rooms-icon.png" /> </i>
+              <b>{{item.Bedrooms}}</b>
+            </a>
+            <a class="tab-item">
+              <i class="icon "> <img src="img/bathrooms-icon.png" /> </i>
+              <b> {{item.Bathrooms}}</b>
+            </a>
+            <a class="tab-item">
+              <i class="icon "> <img src="img/area-icon.png" /> </i>
+              <b>{{item.Size}}<sup>Sqrt</sup></b>
+            </a>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+<div class="">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Boxed -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5891874112692933"
+         data-ad-slot="9381770205"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<div class="list-inset">
+
+    <div class="item text-center BaitakTabs item-button-right">
+        Start your search
+        <button  class="button BaitakButtonHeader button-positive" ng-click="Search()">
+            <i class="icon ion-ios-search-strong"></i>
+        </button>
+    </div>
+
+    <label class="item item-input">
+        <input type="text" placeholder="Enter location to search around"
+               ng-model="SearchData.Location" googleplace="" class="ng-pristine ng-valid" autocomplete="off">
+        <!-- googleplace -->
+    </label>
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  Search for
+              </div>
+              <select ng-model="SearchData.ADType">
+                  <option value="1">Rent</option>
+                  <option value="2">Buy</option>
+
+              </select>
+          </label>
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  Property Type
+              </div>
+              <select ng-model="SearchData.PropertyType">
+                  <option value="All">All</option>
+                  <option value="{{item.propertytype}}" ng-repeat="item in Featured.PType" >{{item.propertytype}}</option>
+              </select>
+          </label>
+
+          <label class="item item-input item-select">
+              <div class="input-label">
+                 Price
+              </div>
+              <select  ng-model="SearchData.Price" id="slider-range-price1-value" class="bootstrap-select" title="Price:">
+                  <option value="0 - 1000">0 - 1000 <sup>AED</sup></option>
+                  <option value="1001 - 10000">1001 - 10000 <sup>AED</sup></option>
+                  <option value="10001 - 30000">10001 - 30000 <sup>AED</sup></option>
+                  <option value="30001 - 70000">30001 - 70000 <sup>AED</sup></option>
+                  <option value="70001 - 999990000">Above 70000 <sup>AED</sup></option>
+              </select>
+          </label>
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  Size
+              </div>
+              <select ng-model="SearchData.Size" id="slider-range-area1-value" class="bootstrap-select" title="Size:">
+                  <option value="0 - 1000">0 - 1000 <sup>sqft</sup></option>
+                  <option value="1001 - 10000">1001 - 10000 <sup>sqft</sup></option>
+                  <option value="10001 - 30000">10001 - 30000 <sup>sqft</sup></option>
+                  <option value="30001 - 70000">30001 - 70000 <sup>sqft</sup></option>
+                  <option value="70001 - 999990000">Above 70000 <sup>sqft</sup></option>
+              </select>
+          </label>
+
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  Bedrooms
+              </div>
+              <select ng-model="SearchData.Bedrooms"   id="slider-range-bedrooms1-value" class="bootstrap-select" title="Bedrooms:">
+                  <option value="0 - 0">Studio </option>
+                  <option value="1 - 2">1 - 2</option>
+                  <option value="3 - 4">3 - 4</option>
+                  <option value="5 - 6">5 - 6</option>
+                  <option value="7 - 8">7 - 8</option>
+                  <option value="9 - 99">Above 9</option>
+              </select>
+          </label>
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  Bathrooms
+              </div>
+              <select ng-model="SearchData.Bathrooms"  id="slider-range-bathrooms1-value" class="bootstrap-select" title="Bathrooms:">
+
+                  <option value="0 - 2">1 - 2</option>
+                  <option value="3 - 4">3 - 4</option>
+                  <option value="5 - 6">5 - 6</option>
+                  <option value="7 - 8">7 - 8</option>
+                  <option value="9 - 99">Above 9</option>
+              </select>
+          </label>
+          <label class="item item-input">
+              <input  type="text" ng-model="SearchData.Keyword" placeholder="Keyword">
+          </label>
+
+
+      </div>
+
+<div class="clearfix" style="padding-bottom: 50px!important;"> </div>
+  </ion-content>
+
+</ion-view>

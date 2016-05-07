@@ -1,0 +1,13 @@
+<ion-popover-view>
+    <ion-content>
+        <div class="list">
+
+            <a class="item item-icon-left"  ng-repeat="item in Data.Pages" ng-click="GoToPage({{item.PageID}})">
+                <i class="icon ion-ios-list-outline"></i>
+               Page {{item.PageText}}
+            </a>
+
+
+        </div>
+    </ion-content>
+</ion-popover-view>

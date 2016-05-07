@@ -1,0 +1,65 @@
+<ion-view view-title="Search Result" cache-view="false">
+
+    <ion-header-bar class="header bar-subheader">
+
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button id="Btn_ShowFillter" class="button button-icon ion-funnel" ng-click="popover.show($event)">
+                {{Data.CurrentFilter}}
+            </button>
+            <button id="Btn_ShowPager" class="button button-icon ion-ios-book-outline" ng-click="popoverPager.show($event)">
+                Page: {{Data.CurrentPage}}/{{Data.TotalNumberOfPages}}
+            </button>
+        </div>
+    </ion-header-bar>
+  <ion-content class=" has-header">
+<div class="">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Boxed -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5891874112692933"
+         data-ad-slot="9381770205"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+
+          <div ng-repeat="item in Data.Result" >
+              <div class="list list-borderless  card"  >
+                  <div class="item text-center BaitakTabs">
+                      {{item.PropertyType}} for {{item.AdvertismentType}}
+                  </div>
+                  <div class="item item-thumbnail-left item-text-wrap" style="min-height: 150px!important;">
+                      <img src="{{item.Image}}">
+                      <h2>{{item.Title}}</h2>
+                      <p>{{item.Date}}</p>
+                  </div>
+
+                  <div class="tabs tabs-icon-left BaitakTabs">
+                      <a class="tab-item ">
+
+                          <b> {{item.Price}}</b>
+                      </a>
+                      <a class="tab-item">
+                          <i class="icon "> <img src="img/rooms-icon.png" /> </i>
+                          <b>{{item.Bedrooms}}</b>
+                      </a>
+                      <a class="tab-item">
+                          <i class="icon "> <img src="img/bathrooms-icon.png" /> </i>
+                          <b> {{item.Bathrooms}}</b>
+                      </a>
+                      <a class="tab-item">
+                          <i class="icon "> <img src="img/area-icon.png" /> </i>
+                          <b>{{item.Size}}<sup>Sqrt</sup></b>
+                      </a>
+                  </div>
+              </div>
+          </div>
+
+
+<div class="clearfix" style="padding-bottom: 50px!important;"> </div>
+

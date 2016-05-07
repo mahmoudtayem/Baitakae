@@ -1,0 +1,10 @@
+<ion-popover-view>
+    <ion-content>
+        <div class="list">
+            <a ng-repeat="item in Data.OrderBy" class="item" ng-click="OrderResult('{{item.Fillter}}',' {{item.FitlerText}}')">
+                {{item.FitlerText}}
+            </a>
+
+        </div>
+    </ion-content>
+</ion-popover-view>

@@ -1,0 +1,350 @@
+/* Empty. Add your own CSS if you like */
+/* Utilities */
+
+.link {
+    color: #116262;
+    font-weight: bold;
+}
+
+h4 {
+    color: #116262;
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: white!important;
+}
+
+h4:first-child {
+    border-top: none;
+    padding-top: initial;
+    color: white!important;
+}
+
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+    color: white!important;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.no-border {
+    border: none;
+}
+
+.static {
+    position: static;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.border-top {
+    border-top: solid 1px #ccc;
+    padding-top: 30px;
+    color: white!important;
+}
+
+.blue-grey-900 {
+    background-color: #263238 !important;
+    color: white!important;
+}
+/* Menu */
+
+.menu .bar.bar-header.expanded {
+
+    background-size: 120%;
+    background-position: 0%;
+    transition: all .5s ease-in-out;
+
+    color: white!important;
+}
+
+.avatar, .item-avatar .avatar
+{
+    background-size:cover!important;
+}
+
+.menu .avatar {
+    top: 16px;
+    left: 16px;
+    height: 60px;
+    width: 80px;
+}
+
+.menu-meddile p
+{
+    top: 36px!important;
+    left: 16px!important;
+    right: 16px!important;
+    margin: 30px 0 0px!important;
+}
+
+.menu.menu-left {
+    background-image: url('img/bg-pattern9.jpg')!important;
+    background-size: cover!important;
+    font-weight: bold;
+
+
+}
+
+.item-radio input:checked ~ .item-content {
+    background: transparent;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+.item.item-radio .radio-icon {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.item.item-radio:active .radio-icon {
+    opacity: 0;
+    transform: scale(1.6);
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.directions.button-bar {
+    margin: 0 auto;
+    width: 33.333%;
+}
+
+.directions.button-bar button {
+    line-height: 26px;
+}
+
+.ion-arrow-right-c.top-left:before {
+    transform: rotate(-135deg);
+}
+
+.ion-arrow-right-c.top-right:before {
+    transform: rotate(-45deg);
+}
+
+.ion-arrow-right-c.bottom-left:before {
+    transform: rotate(-225deg);
+}
+
+.ion-arrow-right-c.bottom-right:before {
+    transform: rotate(45deg);
+}
+
+#modal {
+    background-color: #ef4e3a;
+    border-radius: 100%;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    height: 50%;
+    bottom: 0;
+    opacity: 0;
+    width: 700px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.expand #modal {
+    background-color: #DBDBDB;
+    border-radius: 0;
+    border-top: solid 4px #ef4e3a;
+    opacity: 1;
+    z-index: 9;
+}
+/* CODE */
+
+.code {
+    color: #333;
+    font-family: monospace;
+    padding: 10px;
+    white-space: pre;
+}
+
+.code-wrapper {
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+.code-wrapper::before {
+    color: #1B5E20;
+    font-family: "Ionicons";
+    speak: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: '\f216 ';
+}
+
+.code-wrapper.active::before {
+    content: '\f207 ';
+}
+
+.code-wrapper .toggle {
+    color: #4CAF50;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 8px;
+    text-decoration: underline;
+}
+
+.code-wrapper .code {
+    opacity: 0;
+    margin-top: -20px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.1s all ease-in-out;
+    z-index: 9999999999;
+}
+
+.code-wrapper.code-wrapper-last .code {
+    position: relative;
+}
+
+.code-wrapper.active .code {
+    background: #f9f9f9;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    left: 16px;
+    height: initial;
+    margin-top: 15px;
+    padding: 15px;
+    right: 16px;
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    width: initial;
+}
+
+.popover {
+    left: initial !important;
+    right: 16px !important;
+    top: 16px !important;
+}
+.platform-android .popover{
+margin-top:10px;
+}
+
+.ion-content , .pane,.scroll-content
+{
+    background-image: url('/img/bg-pattern7.jpg');
+    background-size: contain;
+
+}
+
+.menu1
+{
+    background-image: url('/img/bg-pattern9.jpg')!important;
+    color: white;
+    font-size: 12px!important;
+    font-weight: 900;
+    background-size: cover;
+}
+
+.menu1 ion-list *
+{
+   background: transparent!important;
+    border: none!important;
+}
+
+.title-center
+{
+
+    font-size: 20px!important;
+    font-weight: 900!important;
+    color: white!important;
+
+}
+.bar-header ,.bar-stable , .HeaderBG , .bar-header ,.header-item,ion-header-bar {
+    background-image: url('/img/bg-pattern9.jpg')!important;
+    background-size: cover!important;
+    color: white!important;
+
+    font-size: 20px!important;
+    font-weight: 900!important;
+    color: white!important;
+
+}
+ion-header-bar *
+{
+    color: white!important;
+    font-size: 20px!important;
+    font-weight: 900!important;
+    color: white!important;
+}
+
+ .BaitakTabs{
+    background-image: url('/img/bg-pattern9.jpg')!important;
+    background-size: cover!important;
+    color: white!important;
+    font-weight:900;
+    font-size: 15px!important;
+    color: white!important;
+
+}
+ .BaitakTabs b
+ {
+     font-size: 12px!important;
+
+ }
+
+ .item-complex *
+{
+    background: transparent!important;
+    border: none!important;
+}
+
+
+.search-wrapper-light {
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    background: none;
+    border-radius: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.search-wrapper-light input, .search-wrapper-light input::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+.BaitakButtonHeader
+{
+    background: transparent!important;
+}
+.bar-subheader
+{
+    background-image: url('/img/bg-pattern10.jpg')!important;
+    background-size: cover!important;
+    color: white!important;
+    font-weight:400;
+    font-size: 10px!important;
+    color: white!important;
+
+}
+.bar-subheader button
+{
+    background-image: url('/img/bg-pattern9.jpg')!important;
+    background-size: cover!important;
+    color: white!important;
+    font-weight:400;
+    font-size: 10px!important;
+    color: white!important;
+
+}
