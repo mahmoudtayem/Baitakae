@@ -1,0 +1,11 @@
+<ion-view  title="Featured Companies">
+
+    <ion-content class=" has-header">
+        <ion-list>
+            <a class="item" ng-repeat="item in Data"  ng-click="Search('{{item.CompanyName}}')">
+                {{item.CompanyName}}
+            </a>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,90 @@
+<ion-view view-title="Property Details">
+    <ion-header-bar class="bar bar-subheader ">
+        <div class="  tabs tabs-icon-left BaitakTabs">
+            <a class="tab-item ion-ios-information ">
+
+                <b> {{Data.Data.AdvertismentType}}</b>
+            </a>
+            <a class="tab-item">
+                <i class="icon "> <img src="img/rooms-icon.png"/> </i>
+                <b>{{Data.Data.Bedrooms}}</b>
+            </a>
+            <a class="tab-item">
+                <i class="icon "> <img src="img/bathrooms-icon.png"/> </i>
+                <b> {{Data.Data.Bathrooms}}</b>
+            </a>
+            <a class="tab-item">
+                <i class="icon "> <img src="img/area-icon.png"/> </i>
+                <b>{{Data.Data.Size}}Sqrt</b>
+            </a>
+
+        </div>
+
+    </ion-header-bar>
+  <ion-content class=" has-header has-subheader has-footer">
+
+
+
+      <ion-slide-box class="SliderBG" does-continue="true" slide-interval="500" show-pager="true"
+                     on-slide-changed="slideHasChanged($index)">
+          <ion-slide id="image{{$index}}"  ng-repeat="item in  Data.Data.Images">
+              <div class="list list-borderless  card">
+
+                  <div class="item item-image" style="max-height: 200px!important;">
+                      <img ng-click="openModal($index)" src="{{item}}" on-error="image{{$index}}">
+                  </div>
+
+
+              </div>
+          </ion-slide>
+      </ion-slide-box>
+
+
+      <div class="list list-borderless  ">
+          <div class="item text-center BaitakTabs">
+              Price {{Data.Data.Price}}
+          </div>
+
+          <div class="item item-thumbnail-left item-text-wrap" style="min-height: 150px!important;">
+              <img src="{{Data.Data.Image}}" on-Image-Error="">
+
+              <h2>{{Data.Data.Title}}</h2>
+
+              <p>{{Data.Data.Date}}</p>
+          </div>
+          <div class="item text-center BaitakTabs item-text-wrap">
+               {{Data.Data.Address}}
+          </div>
+
+
+
+          <div class="item item-content item-text-wrap" ng-bind-html="Data.Data.Description" >
+
+          </div>
+      </div>
+
+
+  </ion-content>
+
+    <ion-footer-bar class="bar bar-footer  has-tabs">
+
+        <div class="tabs tabs-positive tabs-icon-top BaitakTabs">
+            <a class="tab-item" href="tel:{{Data.Data.Mobile}}">
+                <i class="icon ion-ios-telephone"></i>
+                Call
+            </a>
+            <a class="tab-item" target="_blank" href="http://maps.google.com/maps?q={{Data.Data.Lat}},{{Data.Data.Lng}}&ll={{Data.Data.Lat}},{{Data.Data.Lng}}&z=17">
+                <i class="icon ion-ios-location"></i>
+                Location
+            </a>
+            <a class="tab-item" ng-click="OpenAminites()">
+                <i class="icon ion-grid"></i>
+                Amenities
+            </a>
+
+        </div>
+
+
+    </ion-footer-bar>
+
+</ion-view>

@@ -50,6 +50,42 @@ var Baitak = angular.module('BaitakMobileApp', ['ionic', 'BaitakMobileApp.contro
           }
         }
       })
+      .state('app.OfferDetails', {
+        url: '/OfferDetails/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/Item.html',
+            controller: 'OfferDetailsCtrl'
+          }
+        }
+      })
+      .state('app.FeaturedAdvertisments', {
+        url: '/FeaturedAdvertisments',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/FeaturedAdvertisments.html',
+            controller: 'FeaturedAdvertismentsCtrl'
+          }
+        }
+      })
+      .state('app.LatestAdvertisments', {
+        url: '/LatestAdvertisments',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/LatestAdvertisments.html',
+            controller: 'LatestAdvertismentsCtrl'
+          }
+        }
+      })
+      .state('app.FeaturedCompaines', {
+        url: '/FeaturedCompaines',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/FeaturedCompaines.html',
+            controller: 'FeaturedCompainesCtrl'
+          }
+        }
+      })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/Home');
